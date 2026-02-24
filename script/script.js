@@ -7,39 +7,16 @@ let card = document.getElementById('card')
 let allFilterBtn = document.getElementById('all-filter-btn')
 let interviewFilterBtn =document.getElementById('interview-filter-btn')
 let rejectFilterBtn=document.getElementById('reject-filter-btn')
+let mainContainer = document.querySelector('main')
+
+
+
+let interviewlist = []
 
 function calculateJobs() {
     total.innerText=card.children.length
 }
 calculateJobs();
-
-let c1=0;
-let toggle=true;
-document.getElementById('interview-btn').addEventListener("click",function(){
-    c1++
-    if(total.innerText>=c1){
-        interview.innerText=c1
-    }
-    if (toggle) {
-        notAppliedBtn.innerText="Interview"
-        toggle=false;
-    }
-    
-})
-let c2=0
-document.getElementById('rejected-btn').addEventListener("click",function(){
-    c2++
-    if(total.innerText>=c2){
-        rejected.innerText=c2
-    }
-    if (!toggle) {
-        notAppliedBtn.innerText="rejected"
-        toggle=true;
-    }
-    
-})
-
-
 
 function togglestyle(id) {
     allFilterBtn.classList.remove('bg-sky-600', 'text-white')
@@ -57,3 +34,25 @@ function togglestyle(id) {
 
     
 }
+mainContainer.addEventListener("click", function(event){
+    const parenNode = event.target.parentNode.parentNode
+    const compName = parenNode.querySelector(".comp-name").innerText
+    console.log(compName)
+    const deleteBtn = parenNode.querySelector("delete")
+    const stack=parenNode.querySelector(".stack").innerText
+    const type = parenNode.querySelector(".type").innerText
+    const status  = parenNode.querySelector(".status").innerText
+    const notes = parenNode.querySelector(".notes").innerText
+
+    const cardInfo ={
+        compName,
+        stack,
+        type,
+        status,
+        notes
+    }
+    const allReadyExist = interviewlist.find(item=> item.compName == cardInfo.compName)
+    if (!allReadyExist) {
+        interviewlist.push(cardInfo);
+    }
+})
