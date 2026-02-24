@@ -29,8 +29,21 @@ function togglestyle(id) {
   let select = document.getElementById(id);
   select.classList.remove("bg-white", "text-[#64748B]");
   select.classList.add("bg-sky-600", "text-white");
+
+  if(id == 'interview-filter-btn'){
+    card.classList.add("hidden")
+    fillteredSection.classList.remove("hidden")
+  }
+  else if(id == "all-filter-btn"){
+  card.classList.remove("hidden")
+  fillteredSection.classList.add("hidden")
+  }
+
+
+
 }
 mainContainer.addEventListener("click", function (event) {
+
   if (event.target.classList.contains("interview-btn")) {
     const parenNode = event.target.parentNode.parentNode;
     const compName = parenNode.querySelector(".comp-name").innerText;
@@ -45,12 +58,15 @@ mainContainer.addEventListener("click", function (event) {
       compName,
       stack,
       type,
-      status,
+      status:"Interview",
       notes,
     };
     const allReadyExist = interviewlist.find(
       (item) => item.compName == cardInfo.compName,
     );
+    parenNode.querySelector(".status").innerText='Interview';
+    parenNode.querySelector(".status").classList.remove("bg-[#EEF4FF]")
+    parenNode.querySelector(".status").classList.add("border", "border-green-500","text-green-600")
     if (!allReadyExist) {
       interviewlist.push(cardInfo);
     }
@@ -68,26 +84,25 @@ function renderInterview() {
     div.className = "card shadow rounded-md p-5";
     div.innerHTML = `
         <div class="flex justify-between">
-            <h3 class="comp-name text-[#002C5C] text-xl font-bold">Mobile First Corp</h3>
+            <h3 class="comp-name text-[#002C5C] text-xl font-bold">${interview.compName}</h3>
             <p class="delete text-[#64748B] rounded-full bg-white shadow p-1">
               <i class="fa-solid fa-trash-can"></i>
             </p>
           </div>
           <span class="stack text-[1rem] text-[#64748B] py-2 inline-block"
-            >React Native Developer</span
+            >${interview.stack}</span
           >
           <p class="type text-[1rem] text-[#64748B] py-2">
-            Remote • Full-time • $130,000 - $175,000
+            ${interview.type}
           </p>
           <button
             id="Not-Applied-btn"
             class="status bg-[#EEF4FF] py-2 px-3 rounded-md"
           >
-            Not Applied
+            ${interview.status}
           </button>
           <p class="notes text-[14px] text-[#323B49] py-2">
-            Build cross-platform mobile applications using React Native. Work on
-            products used by millions of users worldwide.
+            ${interview.notes}
           </p>
           <div>
             <button
@@ -104,5 +119,6 @@ function renderInterview() {
             </button>
           </div>
         `;
+        fillteredSection.appendChild(div)
   }
 }
