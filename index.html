@@ -59,7 +59,6 @@
         <p class="text-[#002C5C] text font-bold">Available Jobs</p>
         <span class="text-[#64748B]">8 jobs</span>
       </div>
-      
     </section>
     <main class="max-w-[1140px] mx-auto">
       <div class="buttons py-5 flex gap-2">
@@ -85,13 +84,135 @@
           Rejected
         </button>
       </div>
-      <section id="filltered-section" class="hidden">
-
-      </section>
-      <section id="card"  class="max-w-[1140px] mx-auto space-y-4">
+      <section id="filltered-section" class="hidden"></section>
+      <section id="card" class="max-w-[1140px] mx-auto space-y-4">
         <div class="card shadow rounded-md p-5">
-          <div  class="flex justify-between">
-            <h3 class="comp-name text-[#002C5C] text-xl font-bold">Mobile First Corp</h3>
+          <div class="flex justify-between">
+            <h3 class="comp-name text-[#002C5C] text-xl font-bold">
+              Mobile First Corp
+            </h3>
+            <p
+              id="delete-btn"
+              class="delete text-[#64748B] rounded-full bg-white shadow p-1"
+            >
+              <i class="fa-solid fa-trash-can"></i>
+            </p>
+          </div>
+          <span class="stack text-[1rem] text-[#64748B] py-2 inline-block"
+            >React Native Developer</span
+          >
+          <p class="type text-[1rem] text-[#64748B] py-2">
+            Remote • Full-time • $130,000 - $175,000
+          </p>
+          <button
+            id="Not-Applied-btn"
+            class="status bg-[#EEF4FF] py-2 px-3 rounded-md"
+          >
+            Not Applied
+          </button>
+          <p class="notes text-[14px] text-[#323B49] py-2">
+            Build cross-platform mobile applications using React Native. Work on
+            products used by millions of users worldwide.
+          </p>
+          <div>
+            <button
+              id="interview-btn"
+              class="interview-btn border border-green-500 py-2 px-2 text-green-500 font-semibold uppercase"
+            >
+              interview
+            </button>
+            <button
+              id="rejected-btn"
+              class="rejected-btn border border border-red-500 py-2 px-2 text-red-500 font-semibold uppercase ml-2"
+            >
+              Rejected
+            </button>
+          </div>
+        </div>
+        <div class="card shadow rounded-md p-5">
+          <div class="flex justify-between">
+            <h3 class="comp-name text-[#002C5C] text-xl font-bold">
+              DataViz Solutions
+            </h3>
+            <p class="delete text-[#64748B] rounded-full bg-white shadow p-1">
+              <i class="fa-solid fa-trash-can"></i>
+            </p>
+          </div>
+          <span class="stack text-[1rem] text-[#64748B] py-2 inline-block"
+            >Data Visualization Specialist</span
+          >
+          <p class="type text-[1rem] text-[#64748B] py-2">
+            Boston, MA • Full-time • $125,000 - $165,000
+          </p>
+          <button
+            id="Not-Applied-btn"
+            class="status bg-[#EEF4FF] py-2 px-3 rounded-md"
+          >
+            Not Applied
+          </button>
+          <p class="notes text-[14px] text-[#323B49] py-2">
+            Transform complex data into compelling visualizations. Required
+            skills: D3.js, React, and strong analytical thinking.
+          </p>
+          <div>
+            <button
+              id="interview-btn"
+              class="interview-btn border border-green-500 py-2 px-2 text-green-500 font-semibold uppercase"
+            >
+              interview
+            </button>
+            <button
+              id="rejected-btn"
+              class="rejected-btn border border-red-500 py-2 px-2 text-red-500 font-semibold uppercase ml-2"
+            >
+              Rejected
+            </button>
+          </div>
+        </div>
+        <div class="card shadow rounded-md p-5">
+          <div class="flex justify-between">
+            <h3 class="comp-name text-[#002C5C] text-xl font-bold">
+              CloudFirst Inc
+            </h3>
+            <p class="delete text-[#64748B] rounded-full bg-white shadow p-1">
+              <i class="fa-solid fa-trash-can"></i>
+            </p>
+          </div>
+          <span class="stack text-[1rem] text-[#64748B] py-2 inline-block"
+            >Backend Developer</span
+          >
+          <p class="type text-[1rem] text-[#64748B] py-2">
+            Seattle, WA • Full-time • $140,000 - $190,000
+          </p>
+          <button
+            id="Not-Applied-btn"
+            class="status bg-[#EEF4FF] py-2 px-3 rounded-md"
+          >
+            Not Applied
+          </button>
+          <p class="notes text-[14px] text-[#323B49] py-2">
+            Design and maintain scalable backend systems using Python and AWS. Work with modern DevOps practices and cloud infrastructure.
+          </p>
+          <div>
+            <button
+              id="interview-btn"
+              class="interview-btn border border-green-500 py-2 px-2 text-green-500 font-semibold uppercase"
+            >
+              interview
+            </button>
+            <button
+              id="rejected-btn"
+              class="rejected-btn border border-red-500 py-2 px-2 text-red-500 font-semibold uppercase ml-2"
+            >
+              Rejected
+            </button>
+          </div>
+        </div>
+        <div class="card shadow rounded-md p-5">
+          <div class="flex justify-between">
+            <h3 class="comp-name text-[#002C5C] text-xl font-bold">
+              Mobile second Corp
+            </h3>
             <p class="delete text-[#64748B] rounded-full bg-white shadow p-1">
               <i class="fa-solid fa-trash-can"></i>
             </p>
@@ -121,15 +242,17 @@
             </button>
             <button
               id="rejected-btn"
-              class="border border-red-500 py-2 px-2 text-red-500 font-semibold uppercase ml-2"
+              class="rejected-btn border border-red-500 py-2 px-2 text-red-500 font-semibold uppercase ml-2"
             >
               Rejected
             </button>
           </div>
         </div>
         <div class="card shadow rounded-md p-5">
-          <div  class="flex justify-between">
-            <h3 class="comp-name text-[#002C5C] text-xl font-bold">Mobile second Corp</h3>
+          <div class="flex justify-between">
+            <h3 class="comp-name text-[#002C5C] text-xl font-bold">
+              Mobile second Corp
+            </h3>
             <p class="delete text-[#64748B] rounded-full bg-white shadow p-1">
               <i class="fa-solid fa-trash-can"></i>
             </p>
@@ -159,13 +282,132 @@
             </button>
             <button
               id="rejected-btn"
-              class="border border-red-500 py-2 px-2 text-red-500 font-semibold uppercase ml-2"
+              class="rejected-btn border border-red-500 py-2 px-2 text-red-500 font-semibold uppercase ml-2"
             >
               Rejected
             </button>
           </div>
         </div>
-
+        <div class="card shadow rounded-md p-5">
+          <div class="flex justify-between">
+            <h3 class="comp-name text-[#002C5C] text-xl font-bold">
+              Mobile second Corp
+            </h3>
+            <p class="delete text-[#64748B] rounded-full bg-white shadow p-1">
+              <i class="fa-solid fa-trash-can"></i>
+            </p>
+          </div>
+          <span class="stack text-[1rem] text-[#64748B] py-2 inline-block"
+            >React Native Developer</span
+          >
+          <p class="type text-[1rem] text-[#64748B] py-2">
+            Remote • Full-time • $130,000 - $175,000
+          </p>
+          <button
+            id="Not-Applied-btn"
+            class="status bg-[#EEF4FF] py-2 px-3 rounded-md"
+          >
+            Not Applied
+          </button>
+          <p class="notes text-[14px] text-[#323B49] py-2">
+            Build cross-platform mobile applications using React Native. Work on
+            products used by millions of users worldwide.
+          </p>
+          <div>
+            <button
+              id="interview-btn"
+              class="interview-btn border border-green-500 py-2 px-2 text-green-500 font-semibold uppercase"
+            >
+              interview
+            </button>
+            <button
+              id="rejected-btn"
+              class="rejected-btn border border-red-500 py-2 px-2 text-red-500 font-semibold uppercase ml-2"
+            >
+              Rejected
+            </button>
+          </div>
+        </div>
+        <div class="card shadow rounded-md p-5">
+          <div class="flex justify-between">
+            <h3 class="comp-name text-[#002C5C] text-xl font-bold">
+              Mobile second Corp
+            </h3>
+            <p class="delete text-[#64748B] rounded-full bg-white shadow p-1">
+              <i class="fa-solid fa-trash-can"></i>
+            </p>
+          </div>
+          <span class="stack text-[1rem] text-[#64748B] py-2 inline-block"
+            >React Native Developer</span
+          >
+          <p class="type text-[1rem] text-[#64748B] py-2">
+            Remote • Full-time • $130,000 - $175,000
+          </p>
+          <button
+            id="Not-Applied-btn"
+            class="status bg-[#EEF4FF] py-2 px-3 rounded-md"
+          >
+            Not Applied
+          </button>
+          <p class="notes text-[14px] text-[#323B49] py-2">
+            Build cross-platform mobile applications using React Native. Work on
+            products used by millions of users worldwide.
+          </p>
+          <div>
+            <button
+              id="interview-btn"
+              class="interview-btn border border-green-500 py-2 px-2 text-green-500 font-semibold uppercase"
+            >
+              interview
+            </button>
+            <button
+              id="rejected-btn"
+              class="rejected-btn border border-red-500 py-2 px-2 text-red-500 font-semibold uppercase ml-2"
+            >
+              Rejected
+            </button>
+          </div>
+        </div>
+        <div class="card shadow rounded-md p-5">
+          <div class="flex justify-between">
+            <h3 class="comp-name text-[#002C5C] text-xl font-bold">
+              WebFlow Agency
+            </h3>
+            <p class="delete text-[#64748B] rounded-full bg-white shadow p-1">
+              <i class="fa-solid fa-trash-can"></i>
+            </p>
+          </div>
+          <span class="stack text-[1rem] text-[#64748B] py-2 inline-block"
+            >Web Designer & Developer</span
+          >
+          <p class="type text-[1rem] text-[#64748B] py-2">
+            Los Angeles, CA • Part-time • $80,000 - $120,000
+          </p>
+          <button
+            id="Not-Applied-btn"
+            class="status bg-[#EEF4FF] py-2 px-3 rounded-md"
+          >
+            Not Applied
+          </button>
+          <p class="notes text-[14px] text-[#323B49] py-2">
+            Create stunning web experiences for high-profile clients. Must have
+            portfolio and experience with modern web design trends.
+          </p>
+          <div>
+            <button
+              id="interview-btn"
+              class="interview-btn border border-green-500 py-2 px-2 text-green-500 font-semibold uppercase"
+            >
+              interview
+            </button>
+            <button
+              id="rejected-btn"
+              class="rejected-btn border border-red-500 py-2 px-2 text-red-500 font-semibold uppercase ml-2"
+            >
+              Rejected
+            </button>
+          </div>
+        </div>
       </section>
     </main>
 
